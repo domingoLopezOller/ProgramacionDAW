@@ -142,36 +142,54 @@ public class Unidad2 {
         // System.out.println("POR AQUÍ VOY");
 
         //IF-ELSE ENCADENADO
-        int dia=3;
-        if(dia==1)
-            System.out.println("LUNES");
+        // int dia=3;
+        // if(dia==1)
+        //     System.out.println("LUNES");
         
-        else if (dia==2){
-            System.out.println("MARTES");
-            System.out.println("asdfadf");
-        }
-        else if (dia==6){
-            System.out.println("SÁBADO");
-        }
-        else{
-            System.out.println("DOMINGO");
-        }
+        // else if (dia==2){
+        //     System.out.println("MARTES");
+        //     System.out.println("asdfadf");
+        // }
+        // else if (dia==6){
+        //     System.out.println("SÁBADO");
+        // }
+        // else{
+        //     System.out.println("DOMINGO");
+        // }
 
-        //SWITCH
-        int valor=3;
-        switch(valor){
-            case 1: System.out.println("Lunes"); break;
-            case 2: System.out.println("MARTES"); break;
-            case 3: 
-                System.out.println("MIÉRCOLES"); 
-                System.out.println("Hola qué tal!!");
-                break;
-            case 4: System.out.println("JUEVES"); break;
-            case 5: System.out.println("VIERNES"); break;
-            case 6: System.out.println("SÁBADO"); break;
-            case 7: System.out.println("DOMIngo"); break;
-            default:System.out.println("Valor incrorrecto"); break;
+        // //SWITCH
+        // int valor=3;
+        // switch(valor){
+        //     case 1: System.out.println("Lunes"); break;
+        //     case 2: System.out.println("MARTES"); break;
+        //     case 3: 
+        //         System.out.println("MIÉRCOLES"); 
+        //         System.out.println("Hola qué tal!!");
+        //         break;
+        //     case 4: System.out.println("JUEVES"); break;
+        //     case 5: System.out.println("VIERNES"); break;
+        //     case 6: System.out.println("SÁBADO"); break;
+        //     case 7: System.out.println("DOMIngo"); break;
+        //     default:System.out.println("Valor incrorrecto"); break;
+        // }
+        // System.out.println("POR AQUí");
+
+        //Clase 4: Bucles
+        //ESTRUCTURAS: FOR
+        // for(int i=0;i<=5;i++){
+        //     System.out.println(i);
+        // }
+        //ESTRUCTURA WHILE
+        int i=0;
+        while(i<0){
+            System.out.println(i);
+            i++;
         }
-        System.out.println("POR AQUí");
+        //ESTRUCTURA DO-WHILE
+        i=0;
+        do{
+            System.out.println(i);
+            i++;
+        }while(i<0);
     }
 }

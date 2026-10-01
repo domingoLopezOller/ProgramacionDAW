@@ -75,12 +75,12 @@ public class Actividades {
     /*
     Actividad calificaciones 
     */
-    //Leer la calificación
-    Scanner sc=new Scanner(System.in);
-    System.out.println("Introduce la nota: ");
-    double numero=Double.parseDouble(sc.nextLine());
+    // //Leer la calificación
+    // Scanner sc=new Scanner(System.in);
+    // System.out.println("Introduce la nota: ");
+    // double numero=Double.parseDouble(sc.nextLine());
     // //Comprobar calificación CON IF-ELSE
-    // if(numero<5){
+    // if(numero<5 OR numero>0){
     //     System.out.println("SUSPENSO");
     // }
     // else if (numero>=5 && numero <6){
@@ -96,19 +96,75 @@ public class Actividades {
     //     System.out.println("SOBRESALIENTE");
     // }
     //Comprobar calificación con SWITCH
-    switch((int)numero){//Tiene que comprobar un valor. Verás que no siempre se podrá usar switch
-        case 0: 
-        case 1:
-        case 2:
-        case 3:
-        case 4: System.out.println("SUSPENSO"); break;
-        case 5: System.out.println("APROBADO"); break;
-        case 6: System.out.println("BIEN"); break;
-        case 7:
-        case 8: System.out.println("NOTABLE"); break;
-        case 9:
-        case 10: System.out.println("SOBRESALIENTE"); break;
-        default: System.out.println("Valor incorrecto"); break;
+    // switch((int)numero){//Tiene que comprobar un valor. Verás que no siempre se podrá usar switch
+    //     case 0: 
+    //     case 1:
+    //     case 2:
+    //     case 3:
+    //     case 4: System.out.println("SUSPENSO"); break;
+    //     case 5: System.out.println("APROBADO"); break;
+    //     case 6: System.out.println("BIEN"); break;
+    //     case 7:
+    //     case 8: System.out.println("NOTABLE"); break;
+    //     case 9:
+    //     case 10: System.out.println("SOBRESALIENTE"); break;
+    //     default: System.out.println("Valor incorrecto"); break;
+    // }
+    
+
+    /*
+    Actividad validar día mes año
+    */
+    // Scanner sc =new Scanner(System.in);
+    // int dia, mes, anio;
+    // System.out.println("Introuce el dia mes año");
+    // dia=sc.nextInt();
+    // mes=sc.nextInt();
+    // anio=sc.nextInt(); sc.nextLine();
+
+    // if((dia>0 && dia <=31) && (mes>0 && mes <=12)){
+    //     if(dia==29 && mes==2){//Comprobar si el año es bisiesto
+    //         if((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)){
+    //             System.out.println("La fecha es correcta");    
+    //         }
+    //         else{
+    //             System.out.println("La fecha es incorrecta");        
+    //         }
+    //     } 
+    //     else{
+    //         System.out.println("La fecha es correcta");
+    //     }
+    // }
+    // else{
+    //     System.out.println("La fecha es incorrecta");
+    // }
+
+    /*
+    Actividad bucle de mútliplos de 2 y 3 entre 50 y 200 
+    */
+    // for(int i=50;i<=200;i++){
+    //     if(i%2==0 && i%3==0){
+    //         System.out.println(i);
+    //     }
+    // }
+
+    /*
+    Actividad del factorial
+    */
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Introduce el número mayor que 0: ");
+    int numero=sc.nextInt();
+    int producto=1;
+    for(int i=numero;i>=1;i--){
+        producto=producto*i;
+    }
+    System.out.println("El factorial de "+numero+" es: "+producto);
+    
+
+
+    while(numero>0){
+        producto=producto*numero;
+        numero--;
     }
     }
 }
