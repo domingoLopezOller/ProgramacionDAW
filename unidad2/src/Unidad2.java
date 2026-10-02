@@ -180,16 +180,18 @@ public class Unidad2 {
         //     System.out.println(i);
         // }
         //ESTRUCTURA WHILE
-        int i=0;
-        while(i<0){
-            System.out.println(i);
-            i++;
-        }
-        //ESTRUCTURA DO-WHILE
-        i=0;
-        do{
-            System.out.println(i);
-            i++;
-        }while(i<0);
+        // int i=0;
+        // while(i<0){
+        //     System.out.println(i);
+        //     i++;
+        // }
+        // //ESTRUCTURA DO-WHILE
+        // i=0;
+        // do{
+        //     System.out.println(i);
+        //     i++;
+        // }while(i<0);
+
+        //Clase 5
     }
 }

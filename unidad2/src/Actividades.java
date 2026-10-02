@@ -151,20 +151,64 @@ public class Actividades {
     /*
     Actividad del factorial
     */
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Introduce el número mayor que 0: ");
-    int numero=sc.nextInt();
-    int producto=1;
-    for(int i=numero;i>=1;i--){
-        producto=producto*i;
-    }
-    System.out.println("El factorial de "+numero+" es: "+producto);
-    
+    // Scanner sc = new Scanner(System.in);
+    // System.out.println("Introduce el número mayor que 0: ");
+    // while(!sc.hasNextInt()){
+    //     System.out.println("HAS INTRODUCIDO UN NÚMERO INCORRECTO. Vuelve a intentarlo: ");
+    //     sc.nextLine();
+    // }
+    // int numero=sc.nextInt();
+    // int producto=1;
+    // //Opción 1: Utilizando bucle for
+    // // for(int i=numero;i>=1;i--){
+    // //     producto=producto*i;
+    // // }
+    // //Opción 2: Recordad que a veces se puede hacer un programa de varias formas
+    // while(numero>0){
+    //     producto=producto*numero;
+    //     numero--;
+    // }
+    // System.out.println("El factorial de "+numero+" es: "+producto);
 
+    /*
+    Actividad: Edades mayor y menor hasta -1 
+    */
+    int maximo=0,minimo=0,numero,contador=0;
+    int contAdultos=0,suma=0,total=0;
+    double media=0.0;
+    //Variable para lectura de teclado
+    Scanner sc=new Scanner(System.in);
 
-    while(numero>0){
-        producto=producto*numero;
-        numero--;
-    }
+    //Repetir hasta leer -1
+    do{
+        System.out.println("Escribe la edad: ");
+        numero=sc.nextInt(); sc.nextLine();
+        if (contador==0){
+            maximo=numero;
+            minimo=numero;
+            contador++;
+        }
+        if(numero>maximo){
+            maximo=numero;
+        }
+        if((numero<minimo) && (numero!=-1)){
+            minimo=numero;
+        }
+        if(numero!=-1){
+            suma=suma+numero;
+            total++;
+        }
+        if(numero>=18){
+            contAdultos++;
+        }
+    }while(numero!=-1);
+    //Imprimir resultados
+    System.out.println("El máximo es: "+maximo);
+    System.out.println("El mínimo es: "+minimo);
+    System.out.println("El número de alumnos introducido es: "+total);
+    System.out.println("De los cuales adultos son: "+contAdultos);
+    System.out.println("La suma de las edades es: "+suma);
+    System.out.println("El promedio de edad es: "+(suma/(double)total));
+
     }
 }
