@@ -173,42 +173,85 @@ public class Actividades {
     /*
     Actividad: Edades mayor y menor hasta -1 
     */
-    int maximo=0,minimo=0,numero,contador=0;
-    int contAdultos=0,suma=0,total=0;
-    double media=0.0;
-    //Variable para lectura de teclado
-    Scanner sc=new Scanner(System.in);
+    // int maximo=0,minimo=0,numero,contador=0;
+    // int contAdultos=0,suma=0,total=0;
+    // double media=0.0;
+    // //Variable para lectura de teclado
+    // Scanner sc=new Scanner(System.in);
 
-    //Repetir hasta leer -1
-    do{
-        System.out.println("Escribe la edad: ");
-        numero=sc.nextInt(); sc.nextLine();
-        if (contador==0){
-            maximo=numero;
-            minimo=numero;
-            contador++;
-        }
-        if(numero>maximo){
-            maximo=numero;
-        }
-        if((numero<minimo) && (numero!=-1)){
-            minimo=numero;
-        }
-        if(numero!=-1){
-            suma=suma+numero;
-            total++;
-        }
-        if(numero>=18){
-            contAdultos++;
-        }
-    }while(numero!=-1);
-    //Imprimir resultados
-    System.out.println("El máximo es: "+maximo);
-    System.out.println("El mínimo es: "+minimo);
-    System.out.println("El número de alumnos introducido es: "+total);
-    System.out.println("De los cuales adultos son: "+contAdultos);
-    System.out.println("La suma de las edades es: "+suma);
-    System.out.println("El promedio de edad es: "+(suma/(double)total));
+    // //Repetir hasta leer -1
+    // do{
+    //     System.out.println("Escribe la edad: ");
+    //     numero=sc.nextInt(); sc.nextLine();
+    //     if (contador==0){
+    //         maximo=numero;
+    //         minimo=numero;
+    //         contador++;
+    //     }
+    //     if(numero>maximo){
+    //         maximo=numero;
+    //     }
+    //     if((numero<minimo) && (numero!=-1)){
+    //         minimo=numero;
+    //     }
+    //     if(numero!=-1){
+    //         suma=suma+numero;
+    //         total++;
+    //     }
+    //     if(numero>=18){
+    //         contAdultos++;
+    //     }
+    // }while(numero!=-1);
+    // //Imprimir resultados
+    // System.out.println("El máximo es: "+maximo);
+    // System.out.println("El mínimo es: "+minimo);
+    // System.out.println("El número de alumnos introducido es: "+total);
+    // System.out.println("De los cuales adultos son: "+contAdultos);
+    // System.out.println("La suma de las edades es: "+suma);
+    // System.out.println("El promedio de edad es: "+(suma/(double)total));
 
+    /*
+    Actividad: Adivinar número
+     */
+    //Declaramos las variables
+    // int numero,aleatorio, intentos=0;
+    // boolean encontrado=false;
+    // aleatorio= (int)(Math.random()* 100) + 1;
+    // System.out.println(aleatorio);
+
+    // //Definimos la entrada por teclado
+    // Scanner sc=new Scanner(System.in);
+    // do{
+    //     System.out.print("DIME UN NÚMERO ENTRE 1 Y 100: ");
+    //     numero=sc.nextInt(); sc.nextLine();
+    //     //Comprobación
+    //     if(numero<aleatorio){
+    //         System.out.println("El número correcto es mayor al introducido");
+    //     }
+    //     else if (numero>aleatorio){
+    //         System.out.println("El número correcto es menor al introducido");
+    //     }
+    //     else{
+    //         System.out.println("¡¡¡hAS ACERTADO EL NÚMERO!!!!");
+    //         encontrado=true;
+    //     }
+    //     intentos++;
+    // }while(!encontrado);
+    // System.out.println("Has utilizado "+intentos+" para acertar el número "+aleatorio);
+
+    /*
+    Actividad Calculadora
+     */
+    //Realizado en clase por la alumna Sofía
+
+
+
+
+
+    
+
+
+    
     }
+    
 }
