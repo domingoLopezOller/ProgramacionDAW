@@ -193,6 +193,13 @@ public class Unidad2 {
         // }while(i<0);
 
         //Clase 5: bucles anidados y funciones
-        
+        for(int i=1;i<=4;i++){
+            if(i%2==0){//Mostrar sólo las filas pares
+                for(int j=i;j<=4;j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
     }
 }
