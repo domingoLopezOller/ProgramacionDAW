@@ -292,6 +292,50 @@ public class Actividades {
         System.out.println("Has utilizado "+intentos+" para acertar el número "+aleatorio);
         sc.close();
     }
+    public static void mcm(){
+        int numero1,numero2;
+        //Leer los 2 números en valor absoluto
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Introduce los números: ");
+        numero1=Math.abs(sc.nextInt());sc.nextLine();
+        numero2=sc.nextInt();sc.nextLine();
+        numero2=Math.abs(numero2);
+        int mayor;
+        if(numero1>=numero2){
+            mayor=numero1;
+        }
+        else{
+            mayor=numero2;
+        }
+        int mcm=mayor;
+        while(mcm%numero1!=0 || mcm%numero2!=0){
+            mcm=mcm+mayor;
+        }
+        System.out.println("El mcm de los números "+numero1+" y "+numero2+" es: "+mcm);
+
+    }
+    /*
+    Actividad 20: realiza la funciones esPar, divisible y el procedimiento */
+    public static boolean esPar(int numero){
+        boolean algo;
+        if(numero%2==0) algo= true;
+        else{ algo= false;}
+        return algo;
+    }
+    public static boolean esDivisible2y3(int numero){
+        if(numero%2==0 && numero%3==0){
+            return true;
+        }
+        else{ return false;}
+    }
+    public static void imprimirNUmeros(int inicio,int fin){
+        for(int i=inicio;i<=fin;i++){
+            if(esPar(i) && esDivisible2y3(i)){
+                System.out.print(i+", ");
+            }
+        }
+        System.out.println();
+    }
     //Funciones que tomarán la variable global constante PI para hacer los cálculos
     public static void calcularAreaCilindro(double radio, double altura){
         double area=2*PI*(altura+radio);
@@ -316,11 +360,15 @@ public class Actividades {
         //Cuidado con el ámbito de las variables
         valorJ+=5; //Las variables globales si no son constantes se pueden cambiar
     
-        //Usando las funciones de calcular área y volumen del cilindro
-        double radio=3;
-        double altura=5;
-        calcularAreaCilindro(radio, altura);
-        calcularVolumenCilindro(radio,altura);
+        // //Usando las funciones de calcular área y volumen del cilindro
+        // double radio=3;
+        // double altura=5;
+        // calcularAreaCilindro(radio, altura);
+        // calcularVolumenCilindro(radio,altura);
+        // mcm();
+        int inicio=50;
+        int fin=200;
+        imprimirNUmeros(inicio,fin);
     }
 
     //Las funciones pueden estar antes o después de main para utilizarlas
