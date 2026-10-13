@@ -193,13 +193,123 @@ public class Unidad2 {
         // }while(i<0);
 
         //Clase 5: bucles anidados y funciones
-        for(int i=1;i<=4;i++){
-            if(i%2==0){//Mostrar sólo las filas pares
-                for(int j=i;j<=4;j++){
-                    System.out.print("*");
-                }
-                System.out.println();
-            }
+        // for(int i=1;i<=4;i++){
+        //     if(i%2==0){//Mostrar sólo las filas pares
+        //         for(int j=i;j<=4;j++){
+        //             System.out.print("*");
+        //         }
+        //         System.out.println();
+        //     }
+        // }
+
+        //Clase 6:Recursividad
+        // int a = 254; 
+        // System.out.println(funcion(a, 2));
+        // incre(4);
+        // System.out.println(digitosNumero(327));
+        // System.out.println(potencia(2, 8));
+        //Ejecutar Torres Hanoi
+        // Hanoi(20,1,2,3);
+
+        //ASERT Y EXCEPCIONES
+        int edad = -5;
+        assert edad >= 0 : "Edad incorrecta";
+        System.out.println("Fin");
+
+    }
+    public static int calcularFactorial(int n){
+        //Caso base
+        if(n==1) return 1;
+        else{ 
+            return n*calcularFactorial(n-1);
+        }
+    }
+    public static int funcion(int num, int pos){
+        if(num < 10){
+            return num; 
+        }else{
+            return (funcion(num/10, pos-1))+(num % 10)*(int) Math.pow(10, pos)  ;
+        }
+    }
+    /// PILA DE LLAMADAS PARA 254
+    /// 254 -> 4*10^2+funcion(25,1)
+    ///                 -> 5*10¹+funcion(2,0)
+    ///                         -> 2
+    /// 
+    /// Una vez cambio a (funcion(num/10, pos-1))+(num % 10)*(int) Math.pow(10, pos) ;
+    /// 254 -> funcion(25,1)+4*10²
+    ///           -> funcion(2,0)+5*10¹
+    ///                 -> 2
+    /// 
+    public static void incre(int n){
+        if(n>0){
+            System.out.print(n);
+            incre(n-1);
+        }
+        else
+        System.out.println();
+    }
+    //Pila de llamadas para n=4
+    /// n=4 -> incre(3) y después imprimes 4
+    ///         -> incre(2) y despué imprimes 3
+    ///             -> incre(1) y después imprimes 2
+    ///                 -> incre(0) y después imprimes 1
+    /// 
+    //                     "\n"
+
+    public static int digitosNumero(int n){
+        //Caso base
+        if(n>0 && n<=9){
+            return 1;
+        }
+        else{//Caso recursivo
+            return 1+digitosNumero(n/10);
+        }
+    }
+
+
+    //Ejemplo sumaN
+    public static int sumaN(int N){
+        //Enfoque iterativo
+        // int suma=0;
+        // for(int i=1;i<=N;i++){
+        //     suma=suma+i;
+        // }
+        // return suma;
+
+        //Enfoque recursivo
+        //Caso base
+        if(N==1){ return 1;}
+        else{ //Caso recursivo  
+            return N+sumaN(N-1);
+        }
+    }
+
+    //Torres Hanoi
+    public static void Hanoi(int n, int origen,  int auxiliar, int destino){
+        if(n==1){
+           System.out.println("mover disco de " + origen + " a " + destino);
+        }else{
+	     //Se llevan los n-1 de origen al auxiliar
+           Hanoi(n-1, origen, destino, auxiliar);
+	     //Se llevan el que queda a destino
+           System.out.println("mover disco de "+ origen + " a " + destino);
+	     //Se llevan los n-1 de auxiliar a destino
+           Hanoi(n-1, auxiliar, origen, destino);
+        }
+    }
+    //calcular potencia 
+    public static int potencia(int a, int b){
+        //Enfoque iterativo a^b Ej: 3⁴=3*3*3*3 
+        // int potencia=1;
+        // for(int i=1;i<=b;i++){
+        //     potencia=potencia*a;
+        // }
+        // return potencia;
+        //Caso base
+        if(b==1){ return a;}
+        else{
+            return a*potencia(a,b-1);
         }
     }
 }
