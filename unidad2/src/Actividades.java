@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Actividades {
@@ -366,16 +367,32 @@ public class Actividades {
         // calcularAreaCilindro(radio, altura);
         // calcularVolumenCilindro(radio,altura);
         // mcm();
-        int inicio=50;
-        int fin=200;
-        imprimirNUmeros(inicio,fin);
+        // int inicio=50;
+        // int fin=200;
+        // imprimirNUmeros(inicio,fin);
+        imprimeAlgo();
     }
 
     //Las funciones pueden estar antes o después de main para utilizarlas
     public static void imprimeAlgo(){
         int valorA=0;
-        valorA=valorJ;
+        Scanner sc=new Scanner(System.in);
+        try{
+        System.out.println("Dame un número: ");
+        valorA=sc.nextInt();
+        
         imprimir("Valor de variable: ",valorA);
+        }catch(InputMismatchException error){
+            System.out.println("Ha ocurrido un error porque has metido una letra");
+            System.out.println(error.toString());
+        }catch(Exception error){
+            System.out.println("Ha ocurrido un error porque has metido una letra");
+            System.out.println(error.toString());
+        }
+        finally{
+
+        System.out.println("ESTE SE EJECUTA");
+        }
     }
     
 }

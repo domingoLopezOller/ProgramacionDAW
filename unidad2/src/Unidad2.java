@@ -212,10 +212,33 @@ public class Unidad2 {
         // Hanoi(20,1,2,3);
 
         //ASERT Y EXCEPCIONES
-        int edad = -5;
-        assert edad >= 0 : "Edad incorrecta";
-        System.out.println("Fin");
+        // int edad = -5;
+        // assert edad >= 0 : "Edad incorrecta";
+        // System.out.println("Fin");
 
+        //Atender excepciones
+        try{
+            imprimirDivision();
+        }catch(Exception e){
+            System.out.println("")
+        }
+
+        
+
+    }
+    
+    public static void imprimirDivision() throws Exception{
+        try{
+            int resultado=dividir(10,3);
+            System.out.println(resultado);
+        }catch(ArithmeticException e){
+            System.out.println("Error1");
+        }
+    }
+    public static int dividir(int numerador,int denominador) throws Exception{
+    
+            return numerador/denominador;
+        
     }
     public static int calcularFactorial(int n){
         //Caso base
