@@ -21,10 +21,10 @@ public class Unidad3 {
         // Persona otra=pepa; //ESTO ES UNA REFERENCIA EN MEMORIA RAM
         Persona otra=new Persona(pepa);
         pepa.presentacion();
-        otra.setNombre("Luis");
-        otra.nombre="Antonio";//SUSENSO AUTOMÁTICO EN EL EXAMEN
+        //otra.nombre="Antonio";//SUSPENSO AUTOMÁTICO EN EL EXAMEN
+        otra.setNombre("Luis"); //Hay que utilizar los métodos que acceden a los atributos
         pepa.presentacion();
         otra.presentacion();
-
+        Persona2.imprime();
     }
 }
