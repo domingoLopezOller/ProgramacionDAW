@@ -26,5 +26,7 @@ public class Unidad3 {
         pepa.presentacion();
         otra.presentacion();
         Persona2.imprime();
+        Persona2 nueva=new Persona2("12345", "21/10/2026");
+        nueva.imprime();
     }
 }
