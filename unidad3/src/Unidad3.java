@@ -1,3 +1,11 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+import Actividades.actividad1.CuentaCorriente;
 import Actividades.actividad1.Persona3;
 import mates.Matematicas;
 
@@ -32,10 +40,27 @@ public class Unidad3 {
         // Persona2 nueva=new Persona2("12345", "21/10/2026");
         // nueva.imprime();
 
-        //Acceso a una clase de un PACKAGE
-        Persona3 persona=new Persona3("Domingo","15/08/1985","mi casa",'m',true);
-        //Utilizar el package matematicas
-        int x=Matematicas.sumar(2,3);
-        System.out.println("La suma es:"+ x);
+        // //Acceso a una clase de un PACKAGE
+        // Persona3 persona=new Persona3("Domingo","15/08/1985","mi casa",'m',true);
+        // //Utilizar el package matematicas
+        // int x=Matematicas.sumar(2,3);
+        // System.out.println("La suma es:"+ x);
+
+
+        CuentaCorriente cuenta =new CuentaCorriente();
+        cuenta.setNumeroCuenta("121231231231232131231");
+        cuenta.imprimeCuenta();
+        Persona3 persona=new Persona3();
+        persona.setNombre("Sofía");
+        cuenta.setCliente(persona);
+        cuenta.imprimeCuenta();
+
+
+        CuentaCorriente otra=new CuentaCorriente("162738192831312931239",25,new Persona3("Matías","23/02/2006","mi casa",'f',true));
+        otra.imprimeCuenta();
+
+        
     }
+
+
 }

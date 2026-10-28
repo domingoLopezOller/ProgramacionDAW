@@ -12,6 +12,12 @@ public class CuentaCorriente {
         this.numeroCuenta=numeroCuenta;
         this.saldo=saldo;
     }
+
+    public CuentaCorriente(String numeroCUenta,double saldo, Persona3 persona){
+        this.numeroCuenta=numeroCUenta;
+        this.saldo=saldo;
+        this.cliente=persona;
+    }
     public CuentaCorriente(CuentaCorriente copia){
         this.numeroCuenta=copia.getNumeroCuenta();
         this.saldo=copia.getSaldo();
@@ -36,5 +42,12 @@ public class CuentaCorriente {
     public void setCliente(Persona3 cliente) {
         this.cliente = cliente;
     }   
-    
+    public void imprimeCuenta(){
+        System.out.println("El número de cuenta es: "+this.numeroCuenta);
+        if(cliente!=null){
+            System.out.println(cliente.getNombre());
+        }
+
+
+    }   
 }
