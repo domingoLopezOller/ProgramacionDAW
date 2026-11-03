@@ -47,18 +47,20 @@ public class Unidad3 {
         // System.out.println("La suma es:"+ x);
 
 
-        CuentaCorriente cuenta =new CuentaCorriente();
-        cuenta.setNumeroCuenta("121231231231232131231");
-        cuenta.imprimeCuenta();
+        CuentaCorriente cuenta =new CuentaCorriente("1231231313121231",23.85);
+        CuentaCorriente cuenta2=new CuentaCorriente(cuenta); //Copia de cuenta
+        cuenta.setNumeroCuenta("121231231231232131231");//Modificar el número de cuenta
+        cuenta.imprimeCuenta(); //No tiene cliente asociado
         Persona3 persona=new Persona3();
         persona.setNombre("Sofía");
         cuenta.setCliente(persona);
         cuenta.imprimeCuenta();
 
-
+        //Ejemplo constructor parámetros y la impresión usando dos métodos
         CuentaCorriente otra=new CuentaCorriente("162738192831312931239",25,new Persona3("Matías","23/02/2006","mi casa",'f',true));
         otra.imprimeCuenta();
-
+        System.out.println(otra);
+        
         
     }
 

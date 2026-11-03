@@ -7,7 +7,7 @@ public class CuentaCorriente {
     private Persona3 cliente;
 
     //Constructores
-    public CuentaCorriente(){}
+    public CuentaCorriente(){    }
     public CuentaCorriente(String numeroCuenta,double saldo){
         this.numeroCuenta=numeroCuenta;
         this.saldo=saldo;
@@ -46,8 +46,14 @@ public class CuentaCorriente {
         System.out.println("El número de cuenta es: "+this.numeroCuenta);
         if(cliente!=null){
             System.out.println(cliente.getNombre());
+            System.out.println("Mi dirección es: "+cliente.getDireccion());
         }
 
 
+    }
+    @Override
+    public String toString() {
+        return "CuentaCorriente [numeroCuenta=" + numeroCuenta + ", saldo=" + saldo + ", cliente=" + cliente + "]";
     }   
+    
 }

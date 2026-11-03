@@ -66,6 +66,12 @@ public class Persona3 {
     }
     public void setSoltero_casado(boolean soltero_casado) {
         this.soltero_casado = soltero_casado;
+    }
+    @Override
+    public String toString() {
+        return "Persona3 [nombre=" + nombre + ", DNI=" + DNI + ", fechaNacimiento=" + fechaNacimiento + ", direccion="
+                + direccion + ", genero=" + genero + ", soltero_casado=" + soltero_casado + "]";
     }    
+    
     
 }
