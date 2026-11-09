@@ -1,10 +1,12 @@
 import java.io.*;
+import java.util.Scanner;
  
 class EjemploBinario{
 public static void main(String [] args)
    throws FileNotFoundException, IOException{
- 
-   FileInputStream in = new FileInputStream("./FicheroEjemplo.txt");
+   Scanner sc=new Scanner(System.in);
+   String entrada=sc.nextLine();
+   FileInputStream in = new FileInputStream(entrada);
    FileOutputStream out = new FileOutputStream("./salida.txt");
  
    int n=0,c;
