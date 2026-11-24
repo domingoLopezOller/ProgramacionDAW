@@ -29,10 +29,10 @@ public class Persona {
 
     public void infoPersona(){
         if (pareja==null){
-            System.out.println("Me llamo "+nombre+" y tengo "+edad);
+            System.out.println("Me llamo "+nombre+" y tengo "+edad+" años");
         }
         else{
-            System.out.println("Me llamo "+nombre+" y tengo "+edad+ " y el nombre de mi pareja es "+pareja.getNombre());
+            System.out.println("Me llamo "+nombre+" y tengo "+edad+ " años y el nombre de mi pareja es "+pareja.getNombre());
         }
         
     }
