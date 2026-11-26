@@ -80,17 +80,45 @@ public class Unidad4{
         //     System.out.println();
         // }
 
-        //PRÁCTICA
-        int[] practica={4,5,1,8,5};
-        // int[] copia={0,0,0,0,0};
-        // int[] copia2=null;
-        // copia2=copiaVector(practica);
+        // //PRÁCTICA
+        // int[] practica={4,5,1,8,5};
+        // // int[] copia={0,0,0,0,0};
+        // // int[] copia2=null;
+        // // copia2=copiaVector(practica);
 
-        //ACTIVIDAD: Función que devuelve la posición donde está el número en un vector
-        System.out.println(buscaNumero(practica, 4));
-        System.out.println(buscaNumero(practica, 7));
-        System.out.println(buscaNumero(practica, 5));
-        System.out.println(buscaNumero2(practica, 5));
+        // //ACTIVIDAD: Función que devuelve la posición donde está el número en un vector
+        // System.out.println(buscaNumero(practica, 4));
+        // System.out.println(buscaNumero(practica, 7));
+        // System.out.println(buscaNumero(practica, 5));
+        // System.out.println(buscaNumero2(practica, 5));
+
+
+
+        //ACTIVIDAD HORARIO
+        // String[][] horario={
+        //     {"BASES DE DATOS","LMSGI","PROGRAMACIÓN","Digitalización","Entornos Desarrollo"},
+        //     {"BASES DE DATOS","LMSGI","PROGRAMACIÓN","Digitalización","Entornos Desarrollo"},
+        //     {"BASES DE DATOS","LMSGI","PROGRAMACIÓN","Digitalización","Entornos Desarrollo"},
+        //     {"BASES DE DATOS","LMSGI","PROGRAMACIÓN","Digitalización","Entornos Desarrollo"},
+        //     {"BASES DE DATOS","LMSGI","PROGRAMACIÓN","Digitalización","Entornos Desarrollo"},
+        //     {"BASES DE DATOS","LMSGI","PROGRAMACIÓN","Digitalización","Entornos Desarrollo"},
+        // };
+        // imprimeHorario(horario);
+
+        //ACTIVIDAD SUMAR MATRICES y mostar el resultado
+        int[][] resultado=null;
+        //Refuerzo visual de la forma matriz, NO HAY POR QUÉ HACERLO ASÍ, PUEDE SER SEGUIDA
+        int[][] a={ {2,0,1},
+                    {3,0,0},
+                    {5,1,1} };
+        int[][] b={{1,0,1},{1,2,1},{1,1,0} };
+        resultado=sumaMatrices(a, b);
+        for(int i=0;i<resultado.length;i++){
+            for(int j=0;j<resultado[i].length;j++){
+                System.out.print(resultado[i][j]+", ");
+            }
+            System.out.println();
+        }
 
     }
     public static int buscaNumero(int[] vector, int numero){
@@ -127,6 +155,29 @@ public class Unidad4{
         return encontrado;
     }
 
+    //Función para imprimir el horario
+    public static void imprimeHorario(String[][] horario){
+        //Elegir el día (Scanner o valor de 0 a 4 que se corresponde de lunes a viernes)
+        int dia=3;
+        //Aquí habría un switch que según el día imprime cada columna
+        System.out.println("IMPRIMIR LAS ASIGNATURAS DEL DÍA "+dia);
+        for(int i=0;i<6;i++){
+            System.out.println(horario[i][dia]);
+        }
+    }
+
+    public static int[][] sumaMatrices(int[][] a, int[][] b){
+        int[][]c={  {0,0,0},
+                    {0,0,0},
+                    {0,0,0},};
+        //Realiza en c la suma de a y b
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                c[i][j]=a[i][j]+b[i][j];
+            }
+        }
+        return c;
+    }
     //Función para multiplicar por 2 cada valor en la posición del vector
     public static int[] multiplica2(int[] vector){
         int[] salida={0,0,0,0};
